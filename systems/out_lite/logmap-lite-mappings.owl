@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl#"
+     xml:base="http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl"
+     xmlns:mappings="http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl#entity1 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl#entity1"/>
+    
+
+
+    <!-- http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl#entity2 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl#entity2"/>
+    
+
+
+    <!-- http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl#measure -->
+
+    <owl:AnnotationProperty rdf:about="http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl#measure"/>
+    
+
+
+    <!-- http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl#relation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.cs.ox.ac.uk/isg/projects/LogMap/mappings.owl#relation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/space-ontology/Operational_Status_of_Spacecraft -->
+
+    <owl:Class rdf:about="https://purl.org/space-ontology/Operational_Status_of_Spacecraft">
+        <owl:equivalentClass rdf:resource="https://w3id.org/tesseract/space-kg/StatusOperational"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://purl.org/space-ontology/Operational_Status_of_Spacecraft"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/tesseract/space-kg/StatusOperational"/>
+        <entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/tesseract/space-kg/StatusOperational</entity1>
+        <entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://purl.org/space-ontology/Operational_Status_of_Spacecraft</entity2>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</measure>
+        <relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">=</relation>
+    </owl:Axiom>
+    
+
+
+    <!-- https://purl.org/space-ontology/Payload -->
+
+    <owl:Class rdf:about="https://purl.org/space-ontology/Payload">
+        <owl:equivalentClass rdf:resource="https://w3id.org/tesseract/space-kg/Payload"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://purl.org/space-ontology/Payload"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/tesseract/space-kg/Payload"/>
+        <entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/tesseract/space-kg/Payload</entity1>
+        <entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://purl.org/space-ontology/Payload</entity2>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</measure>
+        <relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">=</relation>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/tesseract/space-kg/Payload -->
+
+    <owl:Class rdf:about="https://w3id.org/tesseract/space-kg/Payload"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://purl.org/space-ontology/Payload"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/tesseract/space-kg/Payload"/>
+        <entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/tesseract/space-kg/Payload</entity1>
+        <entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://purl.org/space-ontology/Payload</entity2>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</measure>
+        <relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">=</relation>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/tesseract/space-kg/StatusOperational -->
+
+    <owl:Class rdf:about="https://w3id.org/tesseract/space-kg/StatusOperational"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://purl.org/space-ontology/Operational_Status_of_Spacecraft"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/tesseract/space-kg/StatusOperational"/>
+        <entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/tesseract/space-kg/StatusOperational</entity1>
+        <entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://purl.org/space-ontology/Operational_Status_of_Spacecraft</entity2>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</measure>
+        <relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">=</relation>
+    </owl:Axiom>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+

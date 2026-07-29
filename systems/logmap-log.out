@@ -1,0 +1,17 @@
+2026-07-29 18:54:33 INFO  [main                          ] 483  in Parameters           - Reading LogMap parameters from file.
+2026-07-29 18:54:34 INFO  [main                          ] 203  in AbstractState        - Notice: root element does not have an xml:base. Relative IRIs will be resolved against file:/Users/fabio/projects/neurosymbolic-space-kg/systems/satcat-vocab.owl
+2026-07-29 18:54:34 INFO  [main                          ] 1307 in OWLRDFConsumer       - dumping remaining triples
+2026-07-29 18:54:34 INFO  [main                          ] 1341 in OWLRDFConsumer       - done dumping remaining triples
+2026-07-29 18:54:34 INFO  [main                          ] 203  in AbstractState        - Notice: root element does not have an xml:base. Relative IRIs will be resolved against file:/Users/fabio/projects/neurosymbolic-space-kg/systems/ssao.owl
+2026-07-29 18:54:36 INFO  [main                          ] 1307 in OWLRDFConsumer       - dumping remaining triples
+2026-07-29 18:54:36 INFO  [main                          ] 1341 in OWLRDFConsumer       - done dumping remaining triples
+2026-07-29 18:54:36 INFO  [main                          ] 1307 in OWLRDFConsumer       - dumping remaining triples
+2026-07-29 18:54:36 INFO  [main                          ] 1341 in OWLRDFConsumer       - done dumping remaining triples
+2026-07-29 18:55:03 INFO  [main                          ] 203  in AbstractState        - Notice: root element does not have an xml:base. Relative IRIs will be resolved against file:/Users/fabio/projects/neurosymbolic-space-kg/systems/satcat-vocab.owl
+2026-07-29 18:55:03 INFO  [main                          ] 1307 in OWLRDFConsumer       - dumping remaining triples
+2026-07-29 18:55:03 INFO  [main                          ] 1341 in OWLRDFConsumer       - done dumping remaining triples
+2026-07-29 18:55:03 INFO  [main                          ] 203  in AbstractState        - Notice: root element does not have an xml:base. Relative IRIs will be resolved against file:/Users/fabio/projects/neurosymbolic-space-kg/systems/ssao.owl
+2026-07-29 18:55:04 INFO  [main                          ] 1307 in OWLRDFConsumer       - dumping remaining triples
+2026-07-29 18:55:04 INFO  [main                          ] 1341 in OWLRDFConsumer       - done dumping remaining triples
+2026-07-29 18:55:04 INFO  [main                          ] 1307 in OWLRDFConsumer       - dumping remaining triples
+2026-07-29 18:55:04 INFO  [main                          ] 1341 in OWLRDFConsumer       - done dumping remaining triples

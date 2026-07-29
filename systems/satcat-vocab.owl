@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/StatusDecayed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>StatusDecayed</rdfs:label>
+    <skos:definition>Decayed (re-entered).</skos:definition>
+    <skos:notation>D</skos:notation>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/StatusSpare">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>StatusSpare</rdfs:label>
+    <skos:definition>Spare.</skos:definition>
+    <skos:notation>S</skos:notation>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/StatusOperational">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>StatusOperational</rdfs:label>
+    <skos:definition>Operational.</skos:definition>
+    <skos:notation>+</skos:notation>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/StatusPartiallyOperational">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>StatusPartiallyOperational</rdfs:label>
+    <skos:definition>Partially operational.</skos:definition>
+    <skos:notation>P</skos:notation>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:comment>Lifted SATCAT vocabulary and derived orbit-regime classes. Lifted by Tesseract Academy from the CelesTrak SATCAT code tables; the interpretation is ours and is the subject of the accompanying alignment. No disjointness is invented: the source publishes none.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/StatusUnknown">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>StatusUnknown</rdfs:label>
+    <skos:definition>Status unknown.</skos:definition>
+    <skos:notation>?</skos:notation>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/Unknown">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Unknown</rdfs:label>
+    <skos:definition>An object whose type the catalogue does not determine.</skos:definition>
+    <skos:notation>UNK</skos:notation>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/RocketBody">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>RocketBody</rdfs:label>
+    <skos:definition>A spent launch-vehicle stage remaining in orbit.</skos:definition>
+    <skos:notation>R/B</skos:notation>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/StatusNonOperational">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>StatusNonOperational</rdfs:label>
+    <skos:definition>Non-operational.</skos:definition>
+    <skos:notation>-</skos:notation>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/RegimeLEO">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>RegimeLEO</rdfs:label>
+    <skos:definition>Derived orbit regime; thresholds in kg/build_kg.py header.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/RegimeGEORegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>RegimeGEORegion</rdfs:label>
+    <skos:definition>Derived orbit regime; thresholds in kg/build_kg.py header.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/RegimeMEO">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>RegimeMEO</rdfs:label>
+    <skos:definition>Derived orbit regime; thresholds in kg/build_kg.py header.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/StatusExtendedMission">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>StatusExtendedMission</rdfs:label>
+    <skos:definition>Extended mission.</skos:definition>
+    <skos:notation>X</skos:notation>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/RegimeGeostationaryCandidate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>RegimeGeostationaryCandidate</rdfs:label>
+    <skos:definition>Derived orbit regime; thresholds in kg/build_kg.py header.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/RegimeOther">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>RegimeOther</rdfs:label>
+    <skos:definition>Derived orbit regime; thresholds in kg/build_kg.py header.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/Debris">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Debris</rdfs:label>
+    <skos:definition>A catalogued fragment or non-functional object other than a payload or rocket body.</skos:definition>
+    <skos:notation>DEB</skos:notation>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/Payload">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Payload</rdfs:label>
+    <skos:definition>A spacecraft placed in orbit to perform a mission.</skos:definition>
+    <skos:notation>PAY</skos:notation>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/RegimeGraveyardRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>RegimeGraveyardRegion</rdfs:label>
+    <skos:definition>Derived orbit regime; thresholds in kg/build_kg.py header.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/RegimeHEO">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>RegimeHEO</rdfs:label>
+    <skos:definition>Derived orbit regime; thresholds in kg/build_kg.py header.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tesseract/space-kg/StatusBackup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>StatusBackup</rdfs:label>
+    <skos:definition>Backup or standby.</skos:definition>
+    <skos:notation>B</skos:notation>
+  </rdf:Description>
+</rdf:RDF>

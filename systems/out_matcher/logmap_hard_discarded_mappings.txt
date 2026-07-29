@@ -1,0 +1,17 @@
+https://w3id.org/tesseract/space-kg/StatusPartiallyOperational|https://purl.org/space-ontology/Operational_Status_of_Spacecraft|=|0.8|CLS
+https://w3id.org/tesseract/space-kg/RocketBody|https://purl.org/space-ontology/Reference_Body|=|0.07|CLS
+https://w3id.org/tesseract/space-kg/RocketBody|https://purl.org/space-ontology/Stellar_Body|=|0.01|CLS
+https://w3id.org/tesseract/space-kg/StatusOperational|https://purl.org/space-ontology/Satellite_Operator|=|0.7|CLS
+https://w3id.org/tesseract/space-kg/RocketBody|https://purl.org/space-ontology/Central_Body|=|0.01|CLS
+https://w3id.org/tesseract/space-kg/RocketBody|https://purl.org/space-ontology/Rocket_Debris|=|0.26|CLS
+https://w3id.org/tesseract/space-kg/Debris|https://purl.org/space-ontology/Rocket_Debris|=|0.34|CLS
+https://w3id.org/tesseract/space-kg/StatusOperational|https://purl.org/space-ontology/Operational|=|0.7|CLS
+https://w3id.org/tesseract/space-kg/RocketBody|https://purl.org/space-ontology/Planetary_Body|=|0.01|CLS
+https://w3id.org/tesseract/space-kg/StatusOperational|https://purl.org/space-ontology/Spaceflight_Operation|=|0.7|CLS
+https://w3id.org/tesseract/space-kg/StatusOperational|https://purl.org/space-ontology/Spacecraft_Operator|=|0.7|CLS
+https://w3id.org/tesseract/space-kg/Debris|https://purl.org/space-ontology/Payload_Debris|=|0.32|CLS
+https://w3id.org/tesseract/space-kg/StatusNonOperational|https://purl.org/space-ontology/Operational_Status_of_Spacecraft|=|0.8|CLS
+https://w3id.org/tesseract/space-kg/StatusOperational|https://purl.org/space-ontology/Spacecraft_Operations|=|0.7|CLS
+https://w3id.org/tesseract/space-kg/Debris|https://purl.org/space-ontology/Fragmentation_Debris|=|0.31|CLS
+https://w3id.org/tesseract/space-kg/StatusOperational|https://purl.org/space-ontology/Operator|=|0.7|CLS
+https://w3id.org/tesseract/space-kg/StatusOperational|https://purl.org/space-ontology/Operational_Satellite|=|0.7|CLS

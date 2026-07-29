@@ -1,0 +1,1 @@
+https://w3id.org/tesseract/space-kg/RocketBody|https://purl.org/space-ontology/Rocket_Body_Debris|=|0.44|CLS
