@@ -12,11 +12,11 @@ repositories: [industrial-ontology-crosswalks](https://github.com/fabio-rovai/in
 
 ## At a glance
 
-- **The graph:** 832,680 triples over 70,122 objects from a pinned CelesTrak
+- **The graph:** 833,403 triples over 70,122 objects from a pinned CelesTrak
   SATCAT snapshot (2026-07-29): 27,258 payloads, 6,870 rocket bodies, 35,833
   debris objects; 34,711 in orbit, 35,411 decayed; derived orbit regimes
-  (28,238 LEO, 1,011 geosynchronous-band, 723 geostationary candidates,
-  23 graveyard-region residents).
+  (28,238 LEO, 1,734 geosynchronous-band residents of which 723 are
+  geostationary candidates, 23 graveyard-region residents).
 - **The alignment:** a curated SSSOM crosswalk from the lifted SATCAT
   vocabulary to Rovetto's SSA Ontology (353 classes, the NASA mission-viz
   vendoring): 15 correspondences and 2 asserted non-mappings, every row argued.
@@ -24,14 +24,30 @@ repositories: [industrial-ontology-crosswalks](https://github.com/fabio-rovai/in
   axiom, between two ephemeris *representation formats*. Only 2 of 353 classes
   can ever participate in a provable contradiction. For 99.4 percent of the
   ontology, **no wrong alignment can be rejected by reasoning, ever.**
+- **A live matcher, scored:** LogMap 4.0 on this pair produces 20 candidate
+  correspondences across its final, discarded and lexical-index pools. **None**
+  is reasoner-rejectable and its repair stage reports **zero** conflicts, while
+  the extensional channel refutes nine, including a category error in its final
+  output (operational objects mapped to operational *statuses*, refuted by all
+  16,167 instances), and rescues a correct mapping LogMap discarded at
+  confidence 0.44 (0 witnesses in 6,870).
 - **The neurosymbolic answer, quantified:** four deliberately wrong but
   lexically plausible mutant mappings (the kind lexical and embedding matchers
   propose) are all invisible to the reasoner, and all refuted by the instance
   data: payload-equals-operational falls to **9,031** counter-instances,
-  geosynchronous-equals-geostationary to **1,007 of 1,011** (99.6 percent),
+  geosynchronous-equals-geostationary to **1,007 of 1,734** (58.1 percent),
   rocket-body-equals-payload to **6,870 of 6,870**, decayed-equals-resident to
   **35,411 of 35,411**. Extensional falsification does the work intensional
   semantics cannot.
+- **Threshold sensitivity, and a self-correction:** the sweep in
+  `gate/sensitivity.py` bounds how much the derived-regime conventions matter
+  (M2's rate is stable at 56 to 59 percent across a four-fold band-width
+  range, and moves with the inclination cut-off as a definitional matter
+  should). It also caught a circularity in an earlier version of this
+  repository, where the geosynchronous band had been derived to *exclude* its
+  geostationary candidates, making that test measure the class definition
+  rather than the world. The vocabulary now nests the two classes and every
+  number was regenerated.
 - **The rules layer:** debris-mitigation signals computed symbolically over
   the graph: a conservative lower bound of **10,016** LEO objects more than
   25 years past launch in a non-mission state (the IADC 25-year rule's
@@ -43,9 +59,11 @@ repositories: [industrial-ontology-crosswalks](https://github.com/fabio-rovai/in
 
 ```bash
 python3 -m venv .venv && .venv/bin/pip install rdflib pyshacl
-.venv/bin/python kg/build_kg.py          # SATCAT -> 832k-triple KG + stats
+.venv/bin/python kg/build_kg.py          # SATCAT -> 833k-triple KG + stats
 .venv/bin/python gate/mutations.py       # intensional vs extensional falsification
+.venv/bin/python gate/sensitivity.py     # threshold sweep of the extensional channel
 .venv/bin/python rules/compliance.py     # debris-mitigation rule signals
+.venv/bin/python systems/systems_eval.py # score LogMap's candidate pool (needs its output)
 ```
 
 ## What is here
@@ -57,6 +75,8 @@ python3 -m venv .venv && .venv/bin/pip install rdflib pyshacl
 | [`kg/build_kg.py`](kg/build_kg.py) | The lift and the graph: SATCAT codes to IRIs, derived orbit regimes with printed thresholds, one node per object. |
 | [`crosswalks/satcat-ssao.sssom.tsv`](crosswalks/satcat-ssao.sssom.tsv) | The argued alignment, including the asserted non-mappings (the DEB-to-Fragmentation_Debris trap; decayed objects are not resident). |
 | [`gate/mutations.py`](gate/mutations.py) | The falsification harness: disjointness-reachability over SSAO plus instance-level refutation of mutant mappings, with witness counts. |
+| [`gate/sensitivity.py`](gate/sensitivity.py) | The threshold sweep, and the test that caught our own circular measurement. |
+| [`systems/systems_eval.py`](systems/systems_eval.py) | Scores a real matcher's full candidate pool (LogMap 4.0) through both channels; its raw outputs are in `systems/out_matcher/` and `systems/out_lite/`. |
 | [`rules/compliance.py`](rules/compliance.py) | IADC-lineage rule signals with their assumptions stated (launch date as lower bound for mission end). |
 | [`SOURCES.lock`](SOURCES.lock) | sha256 pins for the data and ontology snapshots. |
 

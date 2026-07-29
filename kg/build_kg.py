@@ -13,11 +13,12 @@ Design, stated so it can be attacked:
   so the alignment stays a first-class, testable artefact.
 - Orbit regimes are DERIVED from the catalogue's own numbers (perigee, apogee,
   period, inclination), with the thresholds printed into the graph's metadata:
-  LEO: perigee < 2000 km; GEO-region: 1400 <= period <= 1500 min;
-  geostationary CANDIDATE additionally requires inclination <= 5 degrees;
-  graveyard-region: period in GEO band but perigee > 36500 km. MEO: between
-  LEO and GEO bands. HEO: eccentric orbits crossing bands (apogee-perigee
-  gap > 20000 km). Decayed objects (DECAY_DATE set) get NO regime.
+  LEO: apogee < 2000 km; GEO band: 1400 <= period <= 1500 min (with perigee
+  <= 36500 km); geostationary CANDIDATE is a SUBSET of the band additionally
+  requiring inclination <= 5 degrees, so the two classes NEST rather than
+  partition; graveyard-region: period in band but perigee > 36500 km. MEO:
+  between LEO and GEO bands. HEO: eccentric orbits crossing bands
+  (apogee-perigee gap > 20000 km). Decayed objects get NO regime.
 
 Run:  .venv/bin/python kg/build_kg.py     (writes kg/out/*.ttl + kg/out/stats.json)
 """
@@ -68,22 +69,29 @@ def parse_float(x):
         return None
 
 
-def regime_of(perigee, apogee, period, inclination):
+def regimes_of(perigee, apogee, period, inclination):
+    """Return ALL applicable regimes. The geosynchronous classes NEST: a
+    geostationary candidate is also a member of the geosynchronous band.
+    Defining the band to exclude its candidates (an if/elif cascade) would
+    make any extensional test of a band-to-geostationary mapping circular,
+    because band membership would then already encode 'inclination > cutoff'.
+    """
     if perigee is None or apogee is None:
-        return None
+        return []
     if period is not None and 1400 <= period <= 1500:
         if perigee > 36500:
-            return "GRAVEYARD"
+            return ["GRAVEYARD"]
+        out = ["GEOREGION"]
         if inclination is not None and inclination <= 5:
-            return "GEOSTATCAND"
-        return "GEOREGION"
+            out.append("GEOSTATCAND")
+        return out
     if apogee - perigee > 20000:
-        return "HEO"
+        return ["HEO"]
     if apogee < 2000:
-        return "LEO"
+        return ["LEO"]
     if perigee >= 2000:
-        return "MEO"
-    return "OTHER"
+        return ["MEO"]
+    return ["OTHER"]
 
 
 def main() -> None:
@@ -167,8 +175,7 @@ def main() -> None:
                     g.add((s, KG[pred], Literal(val, datatype=XSD.double)))
 
             if not decay:
-                reg = regime_of(per, apo, pd_, inc)
-                if reg:
+                for reg in regimes_of(per, apo, pd_, inc):
                     g.add((s, RDF.type, KG[REGIMES[reg]]))
                     stats["by_regime"][reg] = stats["by_regime"].get(reg, 0) + 1
 

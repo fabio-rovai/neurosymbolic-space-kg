@@ -1,6 +1,6 @@
 {
   "by_regime": {
-    "GEOREGION": 1011,
+    "GEOREGION": 1734,
     "GEOSTATCAND": 723,
     "GRAVEYARD": 23,
     "HEO": 2069,
@@ -27,6 +27,6 @@
   "decayed": 35411,
   "in_orbit": 34711,
   "objects": 70122,
-  "triples_instances": 832680,
+  "triples_instances": 833403,
   "triples_vocab": 71
 }

@@ -1,0 +1,199 @@
+{
+  "objects_with_period_and_inclination": 34091,
+  "M2_sweep": [
+    {
+      "band_halfwidth_min": 25,
+      "inclination_cutoff_deg": 1.0,
+      "band_population": 1549,
+      "witnesses_inclined": 1144,
+      "witness_rate": 0.7385
+    },
+    {
+      "band_halfwidth_min": 25,
+      "inclination_cutoff_deg": 3.0,
+      "band_population": 1549,
+      "witnesses_inclined": 988,
+      "witness_rate": 0.6378
+    },
+    {
+      "band_halfwidth_min": 25,
+      "inclination_cutoff_deg": 5.0,
+      "band_population": 1549,
+      "witnesses_inclined": 867,
+      "witness_rate": 0.5597
+    },
+    {
+      "band_halfwidth_min": 25,
+      "inclination_cutoff_deg": 7.0,
+      "band_population": 1549,
+      "witnesses_inclined": 724,
+      "witness_rate": 0.4674
+    },
+    {
+      "band_halfwidth_min": 25,
+      "inclination_cutoff_deg": 10.0,
+      "band_population": 1549,
+      "witnesses_inclined": 551,
+      "witness_rate": 0.3557
+    },
+    {
+      "band_halfwidth_min": 25,
+      "inclination_cutoff_deg": 15.0,
+      "band_population": 1549,
+      "witnesses_inclined": 43,
+      "witness_rate": 0.0278
+    },
+    {
+      "band_halfwidth_min": 50,
+      "inclination_cutoff_deg": 1.0,
+      "band_population": 1751,
+      "witnesses_inclined": 1338,
+      "witness_rate": 0.7641
+    },
+    {
+      "band_halfwidth_min": 50,
+      "inclination_cutoff_deg": 3.0,
+      "band_population": 1751,
+      "witnesses_inclined": 1158,
+      "witness_rate": 0.6613
+    },
+    {
+      "band_halfwidth_min": 50,
+      "inclination_cutoff_deg": 5.0,
+      "band_population": 1751,
+      "witnesses_inclined": 1022,
+      "witness_rate": 0.5837
+    },
+    {
+      "band_halfwidth_min": 50,
+      "inclination_cutoff_deg": 7.0,
+      "band_population": 1751,
+      "witnesses_inclined": 862,
+      "witness_rate": 0.4923
+    },
+    {
+      "band_halfwidth_min": 50,
+      "inclination_cutoff_deg": 10.0,
+      "band_population": 1751,
+      "witnesses_inclined": 644,
+      "witness_rate": 0.3678
+    },
+    {
+      "band_halfwidth_min": 50,
+      "inclination_cutoff_deg": 15.0,
+      "band_population": 1751,
+      "witnesses_inclined": 58,
+      "witness_rate": 0.0331
+    },
+    {
+      "band_halfwidth_min": 75,
+      "inclination_cutoff_deg": 1.0,
+      "band_population": 1786,
+      "witnesses_inclined": 1372,
+      "witness_rate": 0.7682
+    },
+    {
+      "band_halfwidth_min": 75,
+      "inclination_cutoff_deg": 3.0,
+      "band_population": 1786,
+      "witnesses_inclined": 1182,
+      "witness_rate": 0.6618
+    },
+    {
+      "band_halfwidth_min": 75,
+      "inclination_cutoff_deg": 5.0,
+      "band_population": 1786,
+      "witnesses_inclined": 1045,
+      "witness_rate": 0.5851
+    },
+    {
+      "band_halfwidth_min": 75,
+      "inclination_cutoff_deg": 7.0,
+      "band_population": 1786,
+      "witnesses_inclined": 881,
+      "witness_rate": 0.4933
+    },
+    {
+      "band_halfwidth_min": 75,
+      "inclination_cutoff_deg": 10.0,
+      "band_population": 1786,
+      "witnesses_inclined": 654,
+      "witness_rate": 0.3662
+    },
+    {
+      "band_halfwidth_min": 75,
+      "inclination_cutoff_deg": 15.0,
+      "band_population": 1786,
+      "witnesses_inclined": 59,
+      "witness_rate": 0.033
+    },
+    {
+      "band_halfwidth_min": 100,
+      "inclination_cutoff_deg": 1.0,
+      "band_population": 1816,
+      "witnesses_inclined": 1402,
+      "witness_rate": 0.772
+    },
+    {
+      "band_halfwidth_min": 100,
+      "inclination_cutoff_deg": 3.0,
+      "band_population": 1816,
+      "witnesses_inclined": 1210,
+      "witness_rate": 0.6663
+    },
+    {
+      "band_halfwidth_min": 100,
+      "inclination_cutoff_deg": 5.0,
+      "band_population": 1816,
+      "witnesses_inclined": 1069,
+      "witness_rate": 0.5887
+    },
+    {
+      "band_halfwidth_min": 100,
+      "inclination_cutoff_deg": 7.0,
+      "band_population": 1816,
+      "witnesses_inclined": 902,
+      "witness_rate": 0.4967
+    },
+    {
+      "band_halfwidth_min": 100,
+      "inclination_cutoff_deg": 10.0,
+      "band_population": 1816,
+      "witnesses_inclined": 659,
+      "witness_rate": 0.3629
+    },
+    {
+      "band_halfwidth_min": 100,
+      "inclination_cutoff_deg": 15.0,
+      "band_population": 1816,
+      "witnesses_inclined": 61,
+      "witness_rate": 0.0336
+    }
+  ],
+  "M1_sweep": [
+    {
+      "definition": "decayed only",
+      "witnesses": 7529,
+      "population": 27258,
+      "witness_rate": 0.2762
+    },
+    {
+      "definition": "decayed + non-operational (paper)",
+      "witnesses": 9031,
+      "population": 27258,
+      "witness_rate": 0.3313
+    },
+    {
+      "definition": "decayed + non-op + unknown",
+      "witnesses": 10540,
+      "population": 27258,
+      "witness_rate": 0.3867
+    },
+    {
+      "definition": "non-operational only, in orbit",
+      "witnesses": 1502,
+      "population": 27258,
+      "witness_rate": 0.0551
+    }
+  ]
+}

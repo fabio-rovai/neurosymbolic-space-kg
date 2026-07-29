@@ -31,8 +31,8 @@
       "witness_query": "geosynchronous-band objects with inclination > 5 degrees",
       "intensionally_rejectable_via_ssao_disjointness": false,
       "extensional_witnesses": 1007,
-      "population": 1011,
-      "witness_rate": 0.996
+      "population": 1734,
+      "witness_rate": 0.5807
     },
     {
       "id": "M3",
