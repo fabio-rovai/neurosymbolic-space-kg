@@ -1,0 +1,4 @@
+# sha256 pins. satcat.csv fetched 2026-07-29 from https://celestrak.org/pub/satcat.csv (updates daily; pin = reproducibility).
+# SSAO_Rovetto.owl fetched from https://github.com/nasa/mission-viz/raw/refs/heads/main/OntologyDrivenOrrery/SSAO_Rovetto.owl (Turtle despite extension).
+5ab652b92164e85ea6059bf5852b84fc70fb2b8f5aacde6805453d69a702deef  data/satcat.csv
+d940908c68861efb5611251bd273c41194d4370429596a7d2522c6fb61e00441  ontology/SSAO_Rovetto.owl

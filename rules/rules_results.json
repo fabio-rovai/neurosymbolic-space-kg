@@ -1,0 +1,13 @@
+{
+  "snapshot_date": "2026-07-29",
+  "rule_years": 25,
+  "R1_leo_over25y_nonmission_lower_bound": {
+    "payload_nonop": 1356,
+    "rocket_bodies": 636,
+    "debris": 8024,
+    "total": 10016
+  },
+  "R2_decayed_but_operational_rows": 0,
+  "R3_geo_band_nonoperational_payloads_not_in_graveyard": 619,
+  "leo_in_orbit_population": 28238
+}

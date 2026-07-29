@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this knowledge graph, alignment or falsification harness, please cite this repository."
+title: "Neurosymbolic space knowledge graph: SATCAT-to-SSAO alignment with extensional falsification"
+authors:
+  - family-names: "Rovai"
+    given-names: "Fabio"
+    orcid: "https://orcid.org/0009-0001-7244-794X"
+    affiliation: "Tesseract Academy (Kampakis and Co Ltd)"
+version: "0.1.0"
+date-released: "2026-07-29"
+license: "CC-BY-4.0"
+repository-code: "https://github.com/fabio-rovai/neurosymbolic-space-kg"
+keywords:
+  - space situational awareness
+  - knowledge graph
+  - ontology alignment
+  - neurosymbolic AI
+  - SSSOM
+  - space debris
+  - extensional falsification

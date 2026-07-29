@@ -1,0 +1,32 @@
+#curie_map:
+#  kg: "https://w3id.org/tesseract/space-kg/"
+#  ssao: "https://purl.org/space-ontology/"
+#  skos: "http://www.w3.org/2004/02/skos/core#"
+#  semapv: "https://w3id.org/semapv/vocab/"
+#  orcid: "https://orcid.org/"
+#mapping_set_id: "https://w3id.org/tesseract/space-kg/satcat-ssao"
+#mapping_set_version: "0.1.0"
+#mapping_set_title: "Lifted CelesTrak SATCAT vocabulary to Rovetto SSAO crosswalk"
+#license: "https://creativecommons.org/licenses/by/4.0/"
+#creator_id: "orcid:0009-0001-7244-794X"
+#subject_source: "https://w3id.org/tesseract/space-kg/"
+#object_source: "https://purl.org/space-ontology/ssao.owl"
+#comment: "Candidate-for-review alignment between the lifted SATCAT operational vocabulary (70,122 instances) and the Space Situational Awareness Ontology (Rovetto, NASA mission-viz vendoring, 353 classes). Rows with predicate_modifier=Not are asserted NON-mappings. SKOS direction per the SKOS Reference: A skos:narrowMatch B asserts B is the narrower concept; A skos:broadMatch B asserts B is the broader concept. Every correspondence here is additionally subject to EXTENSIONAL testing against the instance data (gate/mutations.py): a mapping the reasoner cannot reject may still be refuted by the catalogue."
+subject_id	subject_label	predicate_id	predicate_modifier	object_id	object_label	mapping_justification	confidence	comment
+kg:Payload	Payload	skos:closeMatch		ssao:Payload	Payload	semapv:ManualMappingCuration	0.85	Both denote the mission-carrying object a launch exists for. Not exact: SSAO also has Spacecraft_Payload for instruments carried aboard; the SATCAT PAY code is the whole spacecraft.
+kg:Payload	Payload	skos:broadMatch		ssao:Artificial_Satellite	Artificial_Satellite	semapv:ManualMappingCuration	0.8	Every catalogued payload is an artificial satellite of some body; Artificial_Satellite is the broader concept, also covering objects SATCAT files elsewhere.
+kg:RocketBody	RocketBody	skos:closeMatch		ssao:Rocket_Body_Debris	Rocket_Body_Debris	semapv:ManualMappingCuration	0.8	Catalogued R/B entries are spent stages, which SSAO files as a debris subclass. Edge honestly noted: a stage in active use during launch is not yet debris, but the catalogue's standing population is spent stages.
+kg:Debris	Debris	skos:closeMatch		ssao:Orbital_Debris	Orbital_Debris	semapv:ManualMappingCuration	0.85	The catalogue DEB code is the on-orbit non-functional fragment population, SSAO's Orbital_Debris. Space_Debris is broader in SSAO (subsuming rocket and payload debris categories regardless of orbit).
+kg:Debris	Debris	skos:closeMatch	Not	ssao:Fragmentation_Debris	Fragmentation_Debris	semapv:ManualMappingCuration	0.85	Asserted non-mapping, the lexical trap of this pair: SATCAT DEB covers fragmentation debris AND mission-related debris (lens caps, separation hardware) which SSAO deliberately separates into MissionRelatedDebris. Equating DEB with Fragmentation_Debris silently misfiles every catalogued lens cap. The catalogue does not distinguish the two, so no extensional test can save this mapping either: it must be refused at curation time.
+kg:Unknown	Unknown	skos:broadMatch		ssao:Resident_Space_Object	Resident_Space_Object	semapv:ManualMappingCuration	0.7	An unknown-type catalogue entry is still a resident space object; nothing narrower is safe to assert.
+kg:StatusOperational	StatusOperational	skos:closeMatch		ssao:Operational_Satellite	Operational_Satellite	semapv:ManualMappingCuration	0.75	Status-to-class coercion, flagged: SATCAT '+' marks operational status of an object, SSAO Operational_Satellite is a satellite kind. The mapping holds only for payloads; an operational-status rocket body is not an Operational_Satellite. The harness tests exactly this edge.
+kg:StatusNonOperational	StatusNonOperational	skos:closeMatch		ssao:Defunct_Spacecraft	Defunct_Spacecraft	semapv:ManualMappingCuration	0.7	Non-operational payloads are defunct spacecraft. Same status-to-class caveat as above; debris with '-' status is not a spacecraft.
+kg:RegimeLEO	RegimeLEO	skos:closeMatch		ssao:Low_Earth_Orbit	Low_Earth_Orbit	semapv:ManualMappingCuration	0.85	Same threshold family: SSAO's own definition text names ~2000 km bounds for the LEO regime; our derivation uses apogee < 2000 km.
+kg:RegimeMEO	RegimeMEO	skos:closeMatch		ssao:Medium_Earth_Orbit	Medium_Earth_Orbit	semapv:ManualMappingCuration	0.8	Between the LEO and GEO bands on both sides.
+kg:RegimeGEORegion	RegimeGEORegion	skos:closeMatch		ssao:Geosynchronous_Orbit	Geosynchronous_Orbit	semapv:ManualMappingCuration	0.85	Period in the sidereal-day band (1400 to 1500 minutes) is the geosynchronous condition; inclination is unconstrained.
+kg:RegimeGeostationaryCandidate	RegimeGeostationaryCandidate	skos:narrowMatch		ssao:Geosynchronous_Orbit	Geosynchronous_Orbit	semapv:ManualMappingCuration	0.85	Geostationary candidates (period band plus inclination <= 5 degrees) are the narrower special case of geosynchronous.
+kg:RegimeGeostationaryCandidate	RegimeGeostationaryCandidate	skos:closeMatch		ssao:Geostationary_Orbit	Geostationary_Orbit	semapv:ManualMappingCuration	0.7	Close, not exact, and threshold-dependent: true geostationary requires near-zero inclination AND near-circularity; our 5-degree candidate band over-approximates. The harness quantifies the over-approximation.
+kg:RegimeGraveyardRegion	RegimeGraveyardRegion	skos:closeMatch		ssao:Graveyard_Orbit	Graveyard_Orbit	semapv:ManualMappingCuration	0.8	Super-synchronous disposal band above GEO; both sides mean the disposal region.
+kg:RegimeHEO	RegimeHEO	skos:closeMatch		ssao:Highly_Elliptical_Orbit	Highly_Elliptical_Orbit	semapv:ManualMappingCuration	0.8	Large apogee-perigee gap is the defining property on both sides.
+kg:StatusDecayed	StatusDecayed	skos:closeMatch	Not	ssao:Resident_Space_Object	Resident_Space_Object	semapv:ManualMappingCuration	0.9	Asserted non-mapping: a decayed object has re-entered and is no longer resident in orbit. Mapping decayed entries to any resident-object or orbit class is the catalogue-scale false friend, and it is EXTENSIONALLY visible: every instance carries a decay date that contradicts residency. The harness counts exactly how visible.
+kg:Debris	Debris	skos:broadMatch		ssao:Artificial_Space_Object	Artificial_Space_Object	semapv:ManualMappingCuration	0.85	All catalogued debris is artificial; the broader anchor holds for every object type in the catalogue.

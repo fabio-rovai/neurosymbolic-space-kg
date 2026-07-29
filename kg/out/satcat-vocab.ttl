@@ -1,0 +1,96 @@
+@prefix kg: <https://w3id.org/tesseract/space-kg/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/tesseract/space-kg> a owl:Ontology ;
+    rdfs:comment "Lifted SATCAT vocabulary and derived orbit-regime classes. Lifted by Tesseract Academy from the CelesTrak SATCAT code tables; the interpretation is ours and is the subject of the accompanying alignment. No disjointness is invented: the source publishes none." .
+
+kg:Debris a owl:Class ;
+    rdfs:label "Debris" ;
+    skos:definition "A catalogued fragment or non-functional object other than a payload or rocket body." ;
+    skos:notation "DEB" .
+
+kg:Payload a owl:Class ;
+    rdfs:label "Payload" ;
+    skos:definition "A spacecraft placed in orbit to perform a mission." ;
+    skos:notation "PAY" .
+
+kg:RegimeGEORegion a owl:Class ;
+    rdfs:label "RegimeGEORegion" ;
+    skos:definition "Derived orbit regime; thresholds in kg/build_kg.py header." .
+
+kg:RegimeGeostationaryCandidate a owl:Class ;
+    rdfs:label "RegimeGeostationaryCandidate" ;
+    skos:definition "Derived orbit regime; thresholds in kg/build_kg.py header." .
+
+kg:RegimeGraveyardRegion a owl:Class ;
+    rdfs:label "RegimeGraveyardRegion" ;
+    skos:definition "Derived orbit regime; thresholds in kg/build_kg.py header." .
+
+kg:RegimeHEO a owl:Class ;
+    rdfs:label "RegimeHEO" ;
+    skos:definition "Derived orbit regime; thresholds in kg/build_kg.py header." .
+
+kg:RegimeLEO a owl:Class ;
+    rdfs:label "RegimeLEO" ;
+    skos:definition "Derived orbit regime; thresholds in kg/build_kg.py header." .
+
+kg:RegimeMEO a owl:Class ;
+    rdfs:label "RegimeMEO" ;
+    skos:definition "Derived orbit regime; thresholds in kg/build_kg.py header." .
+
+kg:RegimeOther a owl:Class ;
+    rdfs:label "RegimeOther" ;
+    skos:definition "Derived orbit regime; thresholds in kg/build_kg.py header." .
+
+kg:RocketBody a owl:Class ;
+    rdfs:label "RocketBody" ;
+    skos:definition "A spent launch-vehicle stage remaining in orbit." ;
+    skos:notation "R/B" .
+
+kg:StatusBackup a owl:Class ;
+    rdfs:label "StatusBackup" ;
+    skos:definition "Backup or standby." ;
+    skos:notation "B" .
+
+kg:StatusDecayed a owl:Class ;
+    rdfs:label "StatusDecayed" ;
+    skos:definition "Decayed (re-entered)." ;
+    skos:notation "D" .
+
+kg:StatusExtendedMission a owl:Class ;
+    rdfs:label "StatusExtendedMission" ;
+    skos:definition "Extended mission." ;
+    skos:notation "X" .
+
+kg:StatusNonOperational a owl:Class ;
+    rdfs:label "StatusNonOperational" ;
+    skos:definition "Non-operational." ;
+    skos:notation "-" .
+
+kg:StatusOperational a owl:Class ;
+    rdfs:label "StatusOperational" ;
+    skos:definition "Operational." ;
+    skos:notation "+" .
+
+kg:StatusPartiallyOperational a owl:Class ;
+    rdfs:label "StatusPartiallyOperational" ;
+    skos:definition "Partially operational." ;
+    skos:notation "P" .
+
+kg:StatusSpare a owl:Class ;
+    rdfs:label "StatusSpare" ;
+    skos:definition "Spare." ;
+    skos:notation "S" .
+
+kg:StatusUnknown a owl:Class ;
+    rdfs:label "StatusUnknown" ;
+    skos:definition "Status unknown." ;
+    skos:notation "?" .
+
+kg:Unknown a owl:Class ;
+    rdfs:label "Unknown" ;
+    skos:definition "An object whose type the catalogue does not determine." ;
+    skos:notation "UNK" .
+

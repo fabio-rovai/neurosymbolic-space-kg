@@ -1,0 +1,32 @@
+{
+  "by_regime": {
+    "GEOREGION": 1011,
+    "GEOSTATCAND": 723,
+    "GRAVEYARD": 23,
+    "HEO": 2069,
+    "LEO": 28238,
+    "MEO": 781,
+    "OTHER": 1251
+  },
+  "by_status": {
+    "StatusBackup": 23,
+    "StatusDecayed": 35411,
+    "StatusExtendedMission": 16,
+    "StatusNonOperational": 1502,
+    "StatusOperational": 16167,
+    "StatusPartiallyOperational": 508,
+    "StatusSpare": 6,
+    "StatusUnknown": 16489
+  },
+  "by_type": {
+    "Debris": 35833,
+    "Payload": 27258,
+    "RocketBody": 6870,
+    "Unknown": 161
+  },
+  "decayed": 35411,
+  "in_orbit": 34711,
+  "objects": 70122,
+  "triples_instances": 832680,
+  "triples_vocab": 71
+}

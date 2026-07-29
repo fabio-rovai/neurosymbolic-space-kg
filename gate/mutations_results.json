@@ -1,0 +1,60 @@
+{
+  "ssao": {
+    "classes": 353,
+    "declared_disjoint_pairs": 1,
+    "declared_pairs_named": [
+      [
+        "Cartesian_Ephemeris",
+        "Keplerian_Ephemeris"
+      ]
+    ],
+    "classes_reachable_by_any_disjointness": 2,
+    "classes_unreachable_by_any_disjointness": 351
+  },
+  "mutants": [
+    {
+      "id": "M1",
+      "mapping": "kg:Payload -> ssao:Operational_Satellite (closeMatch)",
+      "why_plausible": "Payloads are satellites and many are operational; a lexical or embedding matcher scores this pair highly.",
+      "ssao_target": "Operational_Satellite",
+      "witness_query": "payloads whose catalogue status is decayed or non-operational",
+      "intensionally_rejectable_via_ssao_disjointness": false,
+      "extensional_witnesses": 9031,
+      "population": 27258,
+      "witness_rate": 0.3313
+    },
+    {
+      "id": "M2",
+      "mapping": "kg:RegimeGEORegion -> ssao:Geostationary_Orbit (closeMatch)",
+      "why_plausible": "Geosynchronous and geostationary are conflated constantly; period matches exactly.",
+      "ssao_target": "Geostationary_Orbit",
+      "witness_query": "geosynchronous-band objects with inclination > 5 degrees",
+      "intensionally_rejectable_via_ssao_disjointness": false,
+      "extensional_witnesses": 1007,
+      "population": 1011,
+      "witness_rate": 0.996
+    },
+    {
+      "id": "M3",
+      "mapping": "kg:RocketBody -> ssao:Payload (closeMatch)",
+      "why_plausible": "Both are launched objects with owner, launch date and orbit; schema-level features are near-identical.",
+      "ssao_target": "Payload",
+      "witness_query": "all rocket bodies (category swap: none carries a mission)",
+      "intensionally_rejectable_via_ssao_disjointness": false,
+      "extensional_witnesses": 6870,
+      "population": 6870,
+      "witness_rate": 1.0
+    },
+    {
+      "id": "M4",
+      "mapping": "kg:StatusDecayed -> ssao:Resident_Space_Object (broadMatch)",
+      "why_plausible": "Every other catalogue class maps under Resident_Space_Object, so a matcher generalises the pattern.",
+      "ssao_target": "Resident_Space_Object",
+      "witness_query": "objects with a decay date (no longer resident)",
+      "intensionally_rejectable_via_ssao_disjointness": false,
+      "extensional_witnesses": 35411,
+      "population": 35411,
+      "witness_rate": 1.0
+    }
+  ]
+}
