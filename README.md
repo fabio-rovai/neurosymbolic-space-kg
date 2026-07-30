@@ -55,6 +55,22 @@ repositories: [industrial-ontology-crosswalks](https://github.com/fabio-rovai/in
   graveyard region, and **0** decayed-but-operational contradictions inside
   the catalogue itself.
 
+## The model trained on this
+
+[`fabsssss/qwen3-coder-30b-a3b-space`](https://huggingface.co/fabsssss/qwen3-coder-30b-a3b-space)
+is a Qwen3-Coder-30B LoRA that writes SSAO Turtle for space objects and judges
+proposed alignments with instance evidence, trained on data derived from this
+repository ([`fabsssss/ssao-space-instruct`](https://huggingface.co/datasets/fabsssss/ssao-space-instruct)).
+It is, to our knowledge, the first openly published language model targeting a
+space-domain ontology.
+
+The measurement that motivates it: asked for SSAO Turtle, the base model invents
+**13.81** non-existent `ssao:` terms per output (`SpaceObject`, `launchDate`,
+`OrbitalElements`) and declares no prefixes, so nothing parses. After training,
+hallucinated terms fall to **0.06** per output and term conformance rises from
+**0% to 97.2%**. In a domain whose ontology can reject almost nothing, that gap
+is the whole argument for training against a vocabulary gate.
+
 ## Reproduce it
 
 ```bash
